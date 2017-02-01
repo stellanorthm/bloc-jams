@@ -48,7 +48,7 @@ html {
      text-shadow: 1px 1px 0px rgb(58,23,63); /* creates a shadow underneath the text for readability over the image */
  }
 
- .selling-points {
+.selling-points {
      position: relative;
      display: table;
      width: 100%;
@@ -57,7 +57,7 @@ html {
      box-sizing: border-box; /* we'll explain this in a resource */
  }
 
- .point {
+.point {
      display: table-cell;
      position: relative;
      width: 33.3%;
