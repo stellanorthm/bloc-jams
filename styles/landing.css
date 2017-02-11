@@ -43,7 +43,7 @@ body.landing {
      transition: all 0.30s ease-in-out;
      -webkit-transition-delay: 0.5s;
      -moz-transition-delay: 0.5s;
-     transition-delay: 0.7s;
+     transition-delay: 0.5s;
 }
 
 .point  .point-title {
