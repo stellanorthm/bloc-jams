@@ -15,11 +15,11 @@ var collectionItemTemplate =
   ;
 
   window.onload = function() {
-      // #1
+      // #01
       var collectionContainer = document.getElementsByClassName('album-covers')[0];
-      // #2
+      // #02
       collectionContainer.innerHTML = '';
-      // #3
+      // #03
       for (var i = 0; i < 12; i++) {
           collectionContainer.innerHTML += collectionItemTemplate;
       }
