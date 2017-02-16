@@ -28,6 +28,21 @@
     ]
   };
 
+  var albumDiego = {
+     title: 'How Bout Dat',
+     artist: 'D-Train in the Mix',
+     label: 'GL',
+     year: '1986',
+     albumArtUrl: 'assets/images/album_covers/03.png',
+     songs: [
+         { title: 'What up doe?', duration: '2:01' },
+         { title: 'Nothing like tomorrow', duration: '3:01' },
+         { title: 'Is All Good', duration: '1:21' },
+         { title: 'Hello Dear Friend', duration: '2:14' },
+         { title: 'What up Kev?', duration: '5:15' },
+     ]
+   };
+
  var createSongRow = function(songNumber, songName, songLength) {
     var template =
         '<tr class="album-view-song-item">'
@@ -64,5 +79,14 @@
   };
 
  window.onload = function() {
-     setCurrentAlbum(albumPicasso);
+     setCurrentAlbum(albumDiego);
+     random = [albumPicasso, albumMarconi, albumDiego];
+     index = 0;
+     albumImage = addEventListener("click", function() {
+       setCurrentAlbum(random[index]);
+       index++;
+       if (index == random.length) {
+         index = 0;
+       }
+     });
  };
