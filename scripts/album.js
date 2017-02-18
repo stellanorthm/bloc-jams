@@ -79,7 +79,7 @@ var albumPicasso = {
   };
 
 var findParentByClassName = function(element, targetClass) {
-    if (element.parentElement != null) {
+    if (element.parentElement === null) {
       console.log('No parent found');
     }
     else if (element) {
