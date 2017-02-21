@@ -78,21 +78,22 @@ var albumPicasso = {
       }
   };
 
-var findParentByClassName = function(element, targetClass) {
-    if (element.parentElement === null) {
-      console.log('No parent found');
-    }
-    else if (element) {
-        var currentParent = element.parentElement;
-        while (currentParent.className != targetClass && currentParent.className !== null) {
-            currentParent = currentParent.parentElement;
+  var findParentByClassName = function(element, targetClass) {
+      if (element) {
+        if (element.parentElement) {
+          var currentParent = element.parentElement;
+          while (currentParent.className != targetClass && currentParent.className !== null) {
+              currentParent = currentParent.parentElement;
+          }
+          if (currentParent == "undefined") { // if currentParent wasn't found.
+          	console.log("No parent found with that class name");// no parent found with that class name
+          }
+          return currentParent;
+        } else {
+          console.log("No parent found");
         }
-        return currentParent;
-    }
-    else {
-      console.log('No parent found with that class name');
-    }
-};
+      }
+  };
 
 var getSongItem = function(element) {
   switch(element.className) {
