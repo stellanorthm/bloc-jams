@@ -85,7 +85,7 @@ var albumPicasso = {
           while (currentParent.className != targetClass && currentParent.className !== null) {
               currentParent = currentParent.parentElement;
           }
-          if (currentParent == "undefined") { // if currentParent wasn't found.
+          if (currentParent == null) { // if currentParent wasn't found.
           	console.log("No parent found with that class name");// no parent found with that class name
           }
           return currentParent;
