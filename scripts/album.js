@@ -150,13 +150,15 @@ var currentVolume = 80;
 var $previousButton = $('.main-controls .previous');
 var $nextButton = $('.main-controls .next');
 
- var $previousButton = $('.main-controls .previous');
-  var $nextButton = $('.main-controls .next');
+var $previousButton = $('.main-controls .previous');
+var $nextButton = $('.main-controls .next');
+var $togglePlayFromPlayerBar = $('.main-controls .play-pause');
 
   $(document).ready(function() {
       setCurrentAlbum(albumPicasso);
       $previousButton.click(previousSong);
       $nextButton.click(nextSong);
+      $togglePlayFromPlayerBar.click(togglePlayFromPlayerBar);
  });
 
      var random = [albumPicasso, albumMarconi];
@@ -230,4 +232,14 @@ var previousSong = function() {
     $previousSongNumberCell.html(pauseButtonTemplate);
     $lastSongNumberCell.html(lastSongNumber);
 
+};
+
+var togglePlayFromPlayerBar = function() {
+  if (currentSoundFile.isPaused()) {
+         $('.main-controls .play-pause').html(playerBarPauseButton);
+         currentSoundFile.play();
+     } else if (!currentSoundFile.isPaused()) {
+         $('.main-controls .play-pause').html(playerBarPlayButton);
+         currentSoundFile.pause();
+  }
 };
