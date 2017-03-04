@@ -156,7 +156,6 @@ var getSongNumberCell = function(number) {
       });
 
       $seekBars.find('.thumb').mousedown(function(event) {
-
          var $seekBar = $(this).parent();
          $(document).bind('mousemove.thumb', function(event){
              var offsetX = event.pageX - $seekBar.offset().left;
