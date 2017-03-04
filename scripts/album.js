@@ -21,7 +21,7 @@ var setVolume = function(volume) {
      if (currentSoundFile) {
          currentSoundFile.setTime(time);
      }
- }
+ };
 
 var getSongNumberCell = function(number) {
   return $('.song-item-number[data-song-number="' + number + '"]');
