@@ -205,7 +205,7 @@ var getSongNumberCell = function(number) {
   var trackIndex = function(album, song) {
      return album.songs.indexOf(song);
  };
- 
+
 
   var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
   var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause"></span></a>';
